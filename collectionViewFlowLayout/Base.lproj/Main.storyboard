@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QSd-cs-hGV">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="eqf-F2-0rO">
+            <objects>
+                <collectionViewController id="QSd-cs-hGV" customClass="ViewController" customModule="collectionViewFlowLayout" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Goj-k3-bIg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="baz-3b-y9r">
+                            <size key="itemSize" width="150" height="151"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="3" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="mir-lt-X1V" customClass="CollectionViewCell" customModule="collectionViewFlowLayout" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="3" width="150" height="151"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="150" height="151"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Q7-bP-8Ta">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="151"/>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="1Q7-bP-8Ta" firstAttribute="top" secondItem="mir-lt-X1V" secondAttribute="top" id="UMf-f3-hG7"/>
+                                    <constraint firstItem="1Q7-bP-8Ta" firstAttribute="leading" secondItem="mir-lt-X1V" secondAttribute="leading" id="cOM-EK-R1f"/>
+                                    <constraint firstAttribute="trailing" secondItem="1Q7-bP-8Ta" secondAttribute="trailing" id="jGR-lq-OA9"/>
+                                    <constraint firstAttribute="bottom" secondItem="1Q7-bP-8Ta" secondAttribute="bottom" id="ro7-U9-9Yb"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="imgView" destination="1Q7-bP-8Ta" id="epR-SO-bLO"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="QSd-cs-hGV" id="WAI-cB-r0i"/>
+                            <outlet property="delegate" destination="QSd-cs-hGV" id="sPl-h7-t9z"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y0U-ad-3jU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="123" y="-54"/>
+        </scene>
+    </scenes>
+</document>
